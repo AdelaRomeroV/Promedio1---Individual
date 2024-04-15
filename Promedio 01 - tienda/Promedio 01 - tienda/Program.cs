@@ -10,6 +10,9 @@ namespace Promedio_01___tienda
     {
         static void Main(string[] args)
         {
+            Tienda tienda = new Tienda();
+            tienda.ElegirOpciones();
+            Console.WriteLine();
         }
     }
 }
