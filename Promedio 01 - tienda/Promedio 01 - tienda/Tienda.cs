@@ -80,7 +80,8 @@ namespace Promedio_01___tienda
                 switch(Option) 
                 {
                     case "1":
-                        VerCarrito();
+
+                        Console.WriteLine($"Lista de productos y caracteristicas ");
                         break;
                 }
             }
@@ -89,14 +90,6 @@ namespace Promedio_01___tienda
         public void FinalizarCompra()
         {
 
-        }
-
-        public void VerCarrito()
-        {
-            Console.WriteLine($"Producto: ");
-            Console.WriteLine($"Producto: ");
-            Console.WriteLine($"Producto: ");
-            Console.WriteLine($"Producto: ");
         }
 
         public void AddArcilla()
