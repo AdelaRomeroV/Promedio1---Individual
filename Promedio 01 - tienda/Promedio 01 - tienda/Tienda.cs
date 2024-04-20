@@ -8,6 +8,7 @@ namespace Promedio_01___tienda
 {
     internal class Tienda
     {
+        Productos productos;
         bool continueFlag = true;
         public void ElegirOpciones()
         {
@@ -22,38 +23,80 @@ namespace Promedio_01___tienda
                 string Option = Console.ReadLine();
 
                 switch (Option)
-                {
-                    case "0":
-                        continueFlag = false;
-                        break;
-
+                {                    
                     case "1":
                         AddAgregarProducto();
                         break;
 
-                    //case "2":
+                    case "2":
+                        MostrarProductos();
+                        break;
 
+                    case "3":
+                        FinalizarCompra();
+                        break;
                 }
             }
         }
 
         private void AddAgregarProducto()
         {
-            Console.WriteLine("Elige que producto quieres elegir:");
-            Console.WriteLine("Tela o Arcilla");
+            Console.WriteLine("Elige que producto quieres añadir:");
+            Console.WriteLine("1. Tela");
+            Console.WriteLine("2. Arcilla");
 
             string OpcionesProducto = Console.ReadLine();
 
             switch (OpcionesProducto) 
             {
-                case "Arcilla":
+                case "1":
+                    AddTela();
+                    break;
+
+                case "2":
                     AddArcilla();
                     break;
 
-                case "Tela":
-                    AddTela();
+                default:
+                    Console.WriteLine("Opcion no valida");
                     break;
+                
             }
+        }
+
+        public void MostrarProductos()
+        {
+            bool continueFlag = true;
+
+            while(continueFlag)
+            {
+                Console.WriteLine("Introduce el producto que quieres mostrar:\n ");
+                Console.WriteLine("1. Arcilla");
+                Console.WriteLine("2. Tela");
+                Console.WriteLine("Regresa al menú anterior");
+
+                string Option = Console.ReadLine();
+
+                switch(Option) 
+                {
+                    case "1":
+                        VerCarrito();
+                        break;
+                }
+            }
+        }
+
+        public void FinalizarCompra()
+        {
+
+        }
+
+        public void VerCarrito()
+        {
+            Console.WriteLine($"Producto: ");
+            Console.WriteLine($"Producto: ");
+            Console.WriteLine($"Producto: ");
+            Console.WriteLine($"Producto: ");
         }
 
         public void AddArcilla()
