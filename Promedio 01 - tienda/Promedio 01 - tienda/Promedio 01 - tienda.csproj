@@ -43,8 +43,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Arcilla.cs" />
+    <Compile Include="CarritoCompras.cs" />
+    <Compile Include="Productos.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tela.cs" />
+    <Compile Include="Tienda.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
