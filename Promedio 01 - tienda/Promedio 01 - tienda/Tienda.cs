@@ -79,7 +79,10 @@ namespace Promedio_01___tienda
             Console.WriteLine("Introduce el nombre del producto:");
             string name = Console.ReadLine();
 
-            Console.WriteLine("Introducir el tamaño del producto");
+            Console.WriteLine("Introduce el tamaño del producto:");
+            float tamaño = float.Parse(Console.ReadLine());
+
+            Console.WriteLine("Introduce el color del producto:");
         }
     }
 }
