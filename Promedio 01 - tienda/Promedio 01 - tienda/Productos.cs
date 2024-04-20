@@ -10,13 +10,28 @@ namespace Promedio_01___tienda
     {
         string nombres;
         string color;
-
+        string material;
         float peso;
         float tamaño;
         float precio;
-        float material;
+        
+        public Arcilla(string nombre, float peso, float tamaño, string color, float precio)
+        {
+            this.nombres = nombre;
+            this.color = color;
+            this.peso = peso;
+            this.tamaño = tamaño;
+            this.precio = precio;
+        }
 
-
+        public Tela(string nombre, float tamaño, string material, string color, float precio)
+        {
+            this.nombres = nombre;
+            this.color = color;
+            this.tamaño = tamaño;
+            this.precio = precio;
+            this.material = material;
+        }
 
         public void GetCarateristicas()
         {
