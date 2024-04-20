@@ -51,7 +51,7 @@ namespace Promedio_01___tienda
                     break;
 
                 case "Tela":
-
+                    AddTela();
                     break;
             }
         }
@@ -74,7 +74,7 @@ namespace Promedio_01___tienda
             float precio = float.Parse(Console.ReadLine());
         }
 
-        public void Tela()
+        public void AddTela()
         {
             Console.WriteLine("Introduce el nombre del producto:");
             string name = Console.ReadLine();
@@ -83,6 +83,10 @@ namespace Promedio_01___tienda
             float tamaño = float.Parse(Console.ReadLine());
 
             Console.WriteLine("Introduce el color del producto:");
+            string color = Console.ReadLine();
+
+            Console.WriteLine("Introduce el precio del producto");
+            float precio = float.Parse(Console.ReadLine());
         }
     }
 }
