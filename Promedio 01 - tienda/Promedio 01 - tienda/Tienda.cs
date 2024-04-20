@@ -8,7 +8,8 @@ namespace Promedio_01___tienda
 {
     internal class Tienda
     {
-        Productos productos;
+        CarritoCompras car = new CarritoCompras();
+
         bool continueFlag = true;
         public void ElegirOpciones()
         {
@@ -81,7 +82,7 @@ namespace Promedio_01___tienda
                 {
                     case "1":
 
-                        Console.WriteLine($"Lista de productos y caracteristicas ");
+                        Console.WriteLine($"Lista de productos y caracteristicas:");
                         break;
                 }
             }
