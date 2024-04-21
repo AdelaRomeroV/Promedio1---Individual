@@ -8,7 +8,21 @@ namespace Promedio_01___tienda
 {
     internal class Productos
     {
+        string nombres;
+        string color;
+        string material;
+        float peso;
+        float tamano;
+        float precio;      
+
+        public virtual string GetCaracteristicas()
+        {
+            return "Nombres: " + nombres + "Color: " + color + "Precio: " + precio;
+        }
         
-       
+        public float GetPrecio()
+        {
+            return precio;
+        }
     }
 }
