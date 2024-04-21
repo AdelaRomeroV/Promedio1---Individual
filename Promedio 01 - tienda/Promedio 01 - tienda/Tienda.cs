@@ -30,13 +30,14 @@ namespace Promedio_01___tienda
                         break;
 
                     case "2":
-                        MostrarProductos();
+                        car.MostrarProductos();
                         break;
 
                     case "3":
-                        FinalizarCompra();
+                        Console.WriteLine("Finalizar compra");
+                        car.FinalisarCompra();
                         break;
-                }
+                }               
             }
         }
 
@@ -62,53 +63,25 @@ namespace Promedio_01___tienda
                     Console.WriteLine("Opcion no valida");
                     break;
                 
-            }
-        }
-
-        public void MostrarProductos()
-        {
-            bool continueFlag = true;
-
-            while(continueFlag)
-            {
-                Console.WriteLine("Introduce el producto que quieres mostrar:\n ");
-                Console.WriteLine("1. Arcilla");
-                Console.WriteLine("2. Tela");
-                Console.WriteLine("Regresa al menú anterior");
-
-                string Option = Console.ReadLine();
-
-                switch(Option) 
-                {
-                    case "1":
-
-                        Console.WriteLine($"Lista de productos y caracteristicas:");
-                        break;
-                }
-            }
-        }
-
-        public void FinalizarCompra()
-        {
-
+            }                                              
         }
 
         public void AddArcilla()
         {
-            Console.WriteLine("Introduce el nombre del producto:");
+            Console.WriteLine("Nombre: ");
             string name = Console.ReadLine();
 
-            Console.WriteLine("Introduce el peso del producto:");
+            Console.WriteLine("Peso: ");
             float peso = float.Parse(Console.ReadLine());
 
-            Console.WriteLine("Introduce el tamaño:");
+            Console.WriteLine("Tamaño: ");
             float tamaño = float.Parse(Console.ReadLine());
 
-            Console.WriteLine("Introduce el color:");
+            Console.WriteLine("Color: ");
             string color = Console.ReadLine();
 
-            Console.WriteLine("Introduce el precio:");
-            float precio = float.Parse(Console.ReadLine());
+            Console.WriteLine("Precio: ");
+            float precio = float.Parse(Console.ReadLine());   
         }
 
         public void AddTela()
