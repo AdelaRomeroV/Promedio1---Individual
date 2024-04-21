@@ -19,7 +19,6 @@ namespace Promedio_01___tienda
                 Console.WriteLine("1. Agregar productos");
                 Console.WriteLine("2. Ver contenido del carrito");
                 Console.WriteLine("3. Finalizar compra");
-                Console.WriteLine("4. Salir");
 
                 string Option = Console.ReadLine();
 
@@ -81,7 +80,12 @@ namespace Promedio_01___tienda
             string color = Console.ReadLine();
 
             Console.WriteLine("Precio: ");
-            float precio = float.Parse(Console.ReadLine());   
+            float precio = float.Parse(Console.ReadLine());
+
+            if (!float.TryParse(Console.ReadLine(), out precio))
+            {
+
+            }
         }
 
         public void AddTela()
