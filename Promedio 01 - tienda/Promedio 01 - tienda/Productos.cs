@@ -15,15 +15,6 @@ namespace Promedio_01___tienda
         float tamano;
         float precio;      
 
-        /*public virtual string GetCarateristicas()
-        {
-            return 
-        }*/
         
-        public float GetPrecio()
-        {
-            return precio;
-        }
-       
     }
 }
