@@ -29,12 +29,12 @@ namespace Promedio_01___tienda
                         break;
 
                     case "2":
-                        car.MostrarProductos();
+                        //car.MostrarProductos();
                         break;
 
                     case "3":
                         Console.WriteLine("Finalizar compra");
-                        car.FinalisarCompra();
+                        //car.FinalisarCompra();
                         break;
                 }               
             }
@@ -81,11 +81,7 @@ namespace Promedio_01___tienda
 
             Console.WriteLine("Precio: ");
             float precio = float.Parse(Console.ReadLine());
-
-            if (!float.TryParse(Console.ReadLine(), out precio))
-            {
-
-            }
+            
         }
 
         public void AddTela()
@@ -101,6 +97,8 @@ namespace Promedio_01___tienda
 
             Console.WriteLine("Introduce el precio del producto");
             float precio = float.Parse(Console.ReadLine());
+
+            car.AgregaProducto(new Productos { Nombre = name, Color = color, Precio = precio, Tamaño = tamaño, Material = material });
         }
     }
 }
