@@ -7,22 +7,19 @@ using System.Threading.Tasks;
 namespace Promedio_01___tienda
 {
     internal class Productos
-    {
-        string nombres;
-        string color;
-        string material;
-        float peso;
-        float tamano;
-        float precio;      
+    {        
+        public string Nombre { get; set; }
+        public string Color { get; set; }
+        public string Precio { get; set; }
 
         public virtual string GetCaracteristicas()
         {
-            return "Nombres: " + nombres + "Color: " + color + "Precio: " + precio;
+            return "Nombres: " + Nombre + "Color: " + Color + "Precio: " + Precio;
         }
         
         public float GetPrecio()
         {
-            return precio;
+            return Precio;
         }
     }
 }

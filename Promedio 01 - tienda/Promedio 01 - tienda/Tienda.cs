@@ -13,6 +13,7 @@ namespace Promedio_01___tienda
         bool continueFlag = true;
         public void ElegirOpciones()
         {
+
             while (continueFlag)
             {
                 Console.WriteLine("Bienvenido a la tienda, que deseas hacer:/n ");
@@ -23,82 +24,83 @@ namespace Promedio_01___tienda
                 string Option = Console.ReadLine();
 
                 switch (Option)
-                {                    
+                {
                     case "1":
-                        AddAgregarProducto();
+
+                        Console.WriteLine("Caracteristica primordiales");
+
+                        Console.WriteLine("Nombre: ");
+                        string nombre = Console.ReadLine();
+
+                        Console.Write("Color: ");
+                        string color = Console.ReadLine();
+
+                        Console.Write("Precio: ");
+                        float precio;
+
+                        if (!float.TryParse(Console.ReadLine(), out precio))
+                        {
+                            Console.WriteLine("Precio invalido");
+                            break;
+                        }
+
+                        Console.WriteLine("Que producto deseas agregar Tela/Arcilla");
+
+                        string respuesta = Console.ReadLine();
+
+                        if(respuesta.ToUpper() == "Tela")
+                        {
+                            Console.WriteLine("Elegiste Tela\n");
+                            Console.WriteLine("Tamaño: ");
+                            string tamaño = Console.ReadLine();
+
+                            Console.WriteLine("Material: ");
+                            string material = Console.ReadLine();
+
+                            car.AgregarProducto(new Tela
+                            {
+                                Nombre = nombre,
+                                Color = color,
+                                Precio = precio,
+                                Tamaño = tamaño,
+                                Material = material,
+                            });
+                        }
+
+                        else
+                        {
+                            Console.WriteLine("Elegiste Arcilla\n");
+                            Console.WriteLine("Peso: ");
+                            float peso;
+
+                            if (!float.TryParse(Console.ReadLine(), out peso))
+                            {
+                                Console.WriteLine("Peso invalido");
+                                break;
+                            }
+                            car.AgregarProducto(new Arcilla
+                            {
+                                Nombre = nombre,
+                                Color = color,
+                                Precio = precio,
+                                Peso = peso,
+                            });
+                            Console.WriteLine("Producto agregado al carrito de compras");
+                        }
+
                         break;
 
                     case "2":
-                        //car.MostrarProductos();
+                        car.MostrarProductos();
                         break;
 
                     case "3":
                         Console.WriteLine("Finalizar compra");
-                        //car.FinalisarCompra();
+                        car.MostrarProductos();
                         break;
-                }               
+                }
             }
         }
 
-        private void AddAgregarProducto()
-        {
-            Console.WriteLine("Elige que producto quieres añadir:");
-            Console.WriteLine("1. Tela");
-            Console.WriteLine("2. Arcilla");
-
-            string OpcionesProducto = Console.ReadLine();
-
-            switch (OpcionesProducto) 
-            {
-                case "1":
-                    AddTela();
-                    break;
-
-                case "2":
-                    AddArcilla();
-                    break;
-
-                default:
-                    Console.WriteLine("Opcion no valida");
-                    break;
-                
-            }                                              
-        }
-
-        public void AddArcilla()
-        {
-            Console.WriteLine("Nombre: ");
-            string name = Console.ReadLine();
-
-            Console.WriteLine("Peso: ");
-            float peso = float.Parse(Console.ReadLine());
-
-            Console.WriteLine("Tamaño: ");
-            float tamaño = float.Parse(Console.ReadLine());
-
-            Console.WriteLine("Color: ");
-            string color = Console.ReadLine();
-
-            Console.WriteLine("Precio: ");
-            float precio = float.Parse(Console.ReadLine());
-            
-        }
-
-        public void AddTela()
-        {
-            Console.WriteLine("Introduce el nombre del producto:");
-            string name = Console.ReadLine();
-
-            Console.WriteLine("Introduce el tamaño del producto:");
-            float tamaño = float.Parse(Console.ReadLine());
-
-            Console.WriteLine("Introduce el color del producto:");
-            string color = Console.ReadLine();
-
-            Console.WriteLine("Introduce el precio del producto");
-            float precio = float.Parse(Console.ReadLine());
-
-            car.AgregaProducto(new Productos { Nombre = name, Color = color, Precio = precio, Tamaño = tamaño, Material = material });
-        }
     }
 }
