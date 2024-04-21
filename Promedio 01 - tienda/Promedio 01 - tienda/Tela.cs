@@ -9,11 +9,18 @@ namespace Promedio_01___tienda
     internal class Tela : Productos
     {
         public string Tamaño { get; set; }
+
         public string Material {  get; set; }
 
         public override string GetCaracteristicas()
         {
             return "Nombre: " + Nombre + "Tamaño: " + Tamaño + "Material: " + Material + "Color: " + Color + "Precio: " + Precio;
+
+        public string Meterial { get; set; }
+
+        public override string GetCarateristicas() 
+        {
+            return "Nombres: " + nombre + "Tamaño: " + Tamaño + "Material: " + Materiales + "Color: " + Color + "Precio: " + Precio; 
         }
     }
 }
