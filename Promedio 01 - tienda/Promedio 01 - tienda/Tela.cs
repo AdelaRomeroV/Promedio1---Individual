@@ -16,11 +16,6 @@ namespace Promedio_01___tienda
         {
             return "Nombre: " + Nombre + "Tamaño: " + Tamaño + "Material: " + Material + "Color: " + Color + "Precio: " + Precio;
 
-        public string Meterial { get; set; }
-
-        public override string GetCarateristicas() 
-        {
-            return "Nombres: " + nombre + "Tamaño: " + Tamaño + "Material: " + Materiales + "Color: " + Color + "Precio: " + Precio; 
         }
     }
 }

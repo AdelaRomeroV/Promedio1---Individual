@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace Promedio_01___tienda
 {
-    internal class Arcilla
+    internal class Arcilla : Productos
     {
+        public float Peso {  get; set; }
+
+        public override string GetCaracteristicas()
+        {
+            return "Nombre: " + Nombre + "Peso: " + "Color: " + Color + "Precio: " + Precio; 
+        }
     }
 }

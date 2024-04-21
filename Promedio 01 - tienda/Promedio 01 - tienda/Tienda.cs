@@ -29,13 +29,13 @@ namespace Promedio_01___tienda
 
                         Console.WriteLine("Caracteristica primordiales");
 
-                        Console.WriteLine("Nombre: ");
+                        Console.WriteLine("Nombre:");
                         string nombre = Console.ReadLine();
 
-                        Console.Write("Color: ");
+                        Console.Write("Color:");
                         string color = Console.ReadLine();
 
-                        Console.Write("Precio: ");
+                        Console.Write("Precio:");
                         float precio;
 
                         if (!float.TryParse(Console.ReadLine(), out precio))
@@ -51,7 +51,7 @@ namespace Promedio_01___tienda
                         if(respuesta.ToUpper() == "Tela")
                         {
                             Console.WriteLine("Elegiste Tela\n");
-                            Console.WriteLine("Tamaño: ");
+                            Console.WriteLine("Tamaño:");
                             string tamaño = Console.ReadLine();
 
                             Console.WriteLine("Material: ");
@@ -70,7 +70,7 @@ namespace Promedio_01___tienda
                         else
                         {
                             Console.WriteLine("Elegiste Arcilla\n");
-                            Console.WriteLine("Peso: ");
+                            Console.WriteLine("Peso:");
                             float peso;
 
                             if (!float.TryParse(Console.ReadLine(), out peso))

@@ -10,7 +10,7 @@ namespace Promedio_01___tienda
     {        
         public string Nombre { get; set; }
         public string Color { get; set; }
-        public string Precio { get; set; }
+        public float Precio { get; set; }
 
         public virtual string GetCaracteristicas()
         {

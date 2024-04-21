@@ -18,9 +18,9 @@ namespace Promedio_01___tienda
         public float CalculatePrecioTotal()
         {
             float precioTotal = 0;
-            foreach (Productos p in productos) 
+            foreach (var producto in productos) 
             {
-                //precioTotal += productos.GetPrecio();
+                precioTotal += producto.GetPrecio();
             }
 
             return precioTotal;
