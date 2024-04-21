@@ -33,14 +33,14 @@ namespace Promedio_01___tienda
             this.material = material;
         }
 
-        public void GetCarateristicas()
+        public virtual string GetCarateristicas()
         {
-
+            return "Nombre: " + nombres + "Color: " + color + "Precio: " + Precio;
         }
         
         public void GetPrecio()
         {
-
+            return Precio;
         }
        
     }
