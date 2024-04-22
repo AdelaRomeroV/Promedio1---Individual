@@ -48,7 +48,7 @@ namespace Promedio_01___tienda
 
                         string respuesta = Console.ReadLine();
 
-                        if(respuesta.ToUpper() == "Tela")
+                        if(respuesta.ToUpper() == "TELA")
                         {
                             Console.WriteLine("Elegiste Tela\n");
                             Console.WriteLine("Tamaño:");
